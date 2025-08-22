@@ -1,0 +1,194 @@
+import React from 'react';
+import { Heart, Mail, Phone, MapPin, Instagram, Linkedin, Facebook, Calendar, Clock } from 'lucide-react';
+
+const Footer = () => {
+  const quickLinks = [
+    { name: 'Home', href: '#home' },
+    { name: 'Services', href: '#services' },
+    { name: 'About', href: '#about' },
+    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Book Session', href: '#booking' }
+  ];
+
+  const services = [
+    'Accountability Partner',
+    'Mental Strengthening',
+    'Confidence Building',
+    'Performance Outlook Maintenance',
+    'Elite Mentorship Program',
+  ];
+
+  const socialLinks = [
+    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'Facebook', href: '#', icon: Facebook }
+  ];
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId.replace('#', ''));
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer className="bg-gradient-to-br from-gray-50 to-orange-50 border-t border-orange-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+          {/* Brand Column */}
+          <div className="lg:col-span-1 space-y-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-orange-200 to-rose-300 rounded-full flex items-center justify-center">
+                <Heart className="w-5 h-5 text-orange-600" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900">Jazz Ferguson</h3>
+                <p className="text-sm text-gray-600">Former Pro Basketball Player • Life Coach</p>
+              </div>
+            </div>
+            
+            <p className="text-gray-600 leading-relaxed">
+              Helping ambitious individuals develop the champion mindset needed for extraordinary success. 
+              Your victory journey begins with developing the mental toughness of a champion.
+            </p>
+
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  className="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-orange-600 hover:shadow-lg transition-all duration-300"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-6">
+            <h4 className="text-lg font-semibold text-gray-900">Quick Links</h4>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <button
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-gray-600 cursor-pointer hover:text-orange-600 transition-colors duration-300"
+                  >
+                    {link.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-6">
+            <h4 className="text-lg font-semibold text-gray-900">Services</h4>
+            <ul className="space-y-3">
+              {services.map((service) => (
+                <li key={service}>
+                  <span className="text-gray-600">{service}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-6">
+            <h4 className="text-lg font-semibold text-gray-900">Get In Touch</h4>
+            
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 -mt-10 text-orange-600" />
+                <div>
+                  <p className="text-gray-900 font-medium">+31625226724 (WhatsApp), +971582619895</p>
+                  <p className="text-sm text-gray-600">Call or text</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-orange-600" />
+                <div>
+                  <p className="text-gray-900 font-medium">repswithjazz@gmail.com</p>
+                  <p className="text-sm text-gray-600">I respond within 24 hours</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-orange-600" />
+                <div>
+                  <p className="text-gray-900 font-medium">San Francisco, CA</p>
+                  <p className="text-sm text-gray-600">Virtual sessions worldwide</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Office Hours */}
+            <div className="bg-white rounded-lg p-4 border border-orange-100">
+              <div className="flex items-center space-x-2 mb-2">
+                <Clock className="w-4 h-4 text-orange-600" />
+                <h5 className="font-semibold text-gray-900 text-sm">Office Hours</h5>
+              </div>
+              <div className="text-sm text-gray-600 space-y-1">
+                <p>Mon - Fri: 9:00 AM - 6:00 PM PST</p>
+                <p>Sat: 10:00 AM - 2:00 PM PST</p>
+                <p>Sun: By appointment only</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="mt-12 pt-8 border-t border-orange-200">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-center md:text-left">
+              <p className="text-gray-600 text-sm">
+                © {new Date().getFullYear()} Reps With Jazz Life Coaching. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-xs mt-1">
+                Licensed and Insured | ICF Certified Professional Coach | Former Professional Athlete
+              </p>
+            </div>
+
+            <div className="flex items-center space-x-6 text-sm">
+              <a href="#" className="text-gray-600 hover:text-orange-600 transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-gray-600 hover:text-orange-600 transition-colors">
+                Terms of Service
+              </a>
+              <button
+                onClick={() => scrollToSection('#booking')}
+                className="bg-gradient-to-r from-orange-500 to-rose-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center space-x-1"
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Book Now</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="mt-8 flex justify-center space-x-8 text-xs text-gray-500">
+            <div className="text-center">
+              <div className="font-semibold text-gray-700">Former Pro Athlete</div>
+              <div>15 Years Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="font-semibold text-gray-700">ICF Certified</div>
+              <div>Professional Coach</div>
+            </div>
+            <div className="text-center">
+              <div className="font-semibold text-gray-700">Licensed & Insured</div>
+              <div>Professional Services</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
