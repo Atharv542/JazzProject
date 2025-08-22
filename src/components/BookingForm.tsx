@@ -74,10 +74,10 @@ const BookingForm = () => {
 
   try {
     await emailjs.send(
-      "service_dja4r7f",     // replace with your EmailJS service ID
-      "template_5hgnymu",    // replace with your EmailJS template ID
-      formData,              // sends all form data
-      "NlblmczVhV2Vxciv1"      // replace with your EmailJS public key
+     import.meta.env.VITE_EMAIL_SERVICE_ID,
+     import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+     formData,
+    import.meta.env.VITE_EMAIL_PUBLIC_KEY_ID// replace with your EmailJS public key
     );
 
     setIsSubmitting(false);
