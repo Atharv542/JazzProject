@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import {
   Calendar,
   Clock,
@@ -241,18 +243,23 @@ const BookingForm = () => {
                   >
                     Phone Number *
                   </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    required
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-200 focus:border-orange-400 transition-colors ${
-                      errors.phone ? "border-red-400" : "border-gray-300"
-                    }`}
-                    placeholder="Enter your phone number"
-                  />
+            <PhoneInput
+              country={"us"}
+              value={formData.phone}
+              onChange={(phone) => setFormData({ ...formData, phone })}
+              inputClass="!w-full !h-12 !text-sm"
+              inputStyle={{
+                width: "100%",
+                borderRadius: "0.5rem",
+                border: "1px solid #D1D5DB",
+              }}
+              enableSearch={true}
+              specialLabel={null}
+              inputProps={{
+                name: "phone",
+              }}
+              required
+            />
                   {errors.phone && (
                     <div className="flex items-center space-x-1 mt-1 text-red-600">
                       <AlertCircle className="w-4 h-4" />
