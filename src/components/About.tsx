@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-emerald-50 via-orange-50 to-rose-50">
+    <section id="about" className="py-20 bg-gradient-to-br from-emerald-50/50 via-green-50/50 to-teal-50/50 border-t-1 border-emerald-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -36,7 +36,7 @@ const About = () => {
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
                 Meet
-                <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-rose-600">
+                <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">
                  Jazz Ferguson
                 </span>
               </h2>
@@ -55,7 +55,7 @@ const About = () => {
                   key={credential.title}
                   className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
-                  <credential.icon className="w-8 h-8 text-orange-600 mb-2" />
+                  <credential.icon className="w-8 h-8 text-emerald-600 mb-2" />
                   <h4 className="font-semibold text-gray-900 text-sm">{credential.title}</h4>
                   <p className="text-xs text-gray-600">{credential.description}</p>
                 </div>
@@ -73,8 +73,8 @@ const About = () => {
               />
               
               {/* Decorative Elements */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-orange-200 to-rose-200 rounded-2xl -z-10"></div>
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-emerald-200 to-orange-200 rounded-2xl -z-10"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-emerald-200 to-green-200 rounded-2xl -z-10"></div>
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-teal-200 to-emerald-200 rounded-2xl -z-10"></div>
             </div>
           </div>
         </div>
@@ -95,8 +95,8 @@ const About = () => {
                 className="text-center group"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-200 to-rose-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <value.icon className="w-8 h-8 text-orange-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-200 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <value.icon className="w-8 h-8 text-emerald-600" />
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h4>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>

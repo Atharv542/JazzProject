@@ -74,7 +74,7 @@ const Testimonials = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Client
-            <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-rose-600">
+            <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">
               Victory Stories
             </span>
           </h2>
@@ -86,9 +86,9 @@ const Testimonials = () => {
 
         {/* Testimonial Carousel */}
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-orange-50 to-rose-50 rounded-2xl p-8 md:p-12 shadow-lg border border-orange-100 min-h-[400px] flex flex-col justify-center">
+          <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-8 md:p-12 shadow-lg border border-emerald-100 min-h-[400px] flex flex-col justify-center">
             {/* Quote Icon */}
-            <Quote className="w-12 h-12 text-orange-300 mb-6" />
+            <Quote className="w-12 h-12 text-emerald-300 mb-6" />
             
             {/* Testimonial Content */}
             <div className="space-y-6">
@@ -97,8 +97,8 @@ const Testimonials = () => {
               </p>
 
               {/* Result */}
-              <div className="bg-gradient-to-r from-orange-100 to-rose-100 rounded-lg p-2 md:p-4 border-l-4 border-orange-400">
-                <p className="text-[12px] font-semibold text-orange-800 mb-1">Victory Achieved:</p>
+              <div className="bg-gradient-to-r from-emerald-100 to-teal-100 rounded-lg p-2 md:p-4 border-l-4 border-emerald-400">
+                <p className="text-[12px] font-semibold text-emerald-800 mb-1">Victory Achieved:</p>
                 <p className="text-[12px] text-gray-700">{testimonials[currentIndex].result}</p>
               </div>
 
@@ -108,7 +108,7 @@ const Testimonials = () => {
                   <img
                     src={testimonials[currentIndex].image}
                     alt={testimonials[currentIndex].name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-orange-200"
+                    className="w-16 h-16 rounded-full object-cover border-2 border-emerald-200"
                   />
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">
@@ -131,16 +131,16 @@ const Testimonials = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevTestimonial}
-            className="absolute hidden -left-15 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg border border-orange-200 md:flex md:items-center md:justify-center hover:bg-orange-50 transition-colors duration-300"
+            className="absolute hidden -left-15 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg border border-emerald-200 md:flex md:items-center md:justify-center hover:bg-emerald-50 transition-colors duration-300"
           >
-            <ChevronLeft className="w-6 h-6 cursor-pointer hidden md:block text-orange-600" />
+            <ChevronLeft className="w-6 h-6 cursor-pointer hidden md:block text-emerald-600" />
           </button>
           
           <button
             onClick={nextTestimonial}
-            className="absolute hidden -right-15 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg border border-orange-200 md:flex md:items-center md:justify-center hover:bg-orange-50 transition-colors duration-300"
+            className="absolute hidden -right-15 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg border border-emerald-200 md:flex md:items-center md:justify-center hover:bg-emerald-50 transition-colors duration-300"
           >
-            <ChevronRight className="w-6 h-6 cursor-pointer hidden md:block text-orange-600" />
+            <ChevronRight className="w-6 h-6 cursor-pointer hidden md:block text-emerald-600" />
           </button>
         </div>
 
@@ -152,8 +152,8 @@ const Testimonials = () => {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? 'bg-orange-600 w-8'
-                  : 'bg-orange-200 hover:bg-orange-300'
+                  ? 'bg-emerald-600 w-8'
+                  : 'bg-emerald-200 hover:bg-emerald-300'
               }`}
             />
           ))}
