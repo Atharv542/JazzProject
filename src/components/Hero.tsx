@@ -187,7 +187,7 @@ const Hero = () => {
             transition={{ delay: 1, duration: 0.8 }}
           >
             <div className="relative bg-gradient-to-br from-blue-200 via-sky-200 to-indigo-200 rounded-3xl p-8 shadow-2xl overflow-hidden">
-              <div className="relative w-full h-[600px] rounded-2xl overflow-hidden">
+              <div className="relative w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden">
                 <AnimatePresence mode="wait" custom={1}>
                   <motion.img
                     key={currentImageIndex}
