@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-emerald-50/50 via-green-50/50 to-teal-50/50 border-t-1 border-emerald-100">
+    <section id="about" className="py-20 bg-gradient-to-br from-blue-50/50 via-sky-50/50 to-indigo-50/50 border-t-1 border-blue-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -36,7 +36,7 @@ const About = () => {
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
                 Meet
-                <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">
+                <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                  Jazz Ferguson
                 </span>
               </h2>
@@ -53,9 +53,9 @@ const About = () => {
               {credentials.map((credential, index) => (
                 <div
                   key={credential.title}
-                  className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300"
+                  className="bg-gray-100 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
-                  <credential.icon className="w-8 h-8 text-emerald-600 mb-2" />
+                  <credential.icon className="w-8 h-8 text-blue-600 mb-2" />
                   <h4 className="font-semibold text-gray-900 text-sm">{credential.title}</h4>
                   <p className="text-xs text-gray-600">{credential.description}</p>
                 </div>
@@ -67,14 +67,14 @@ const About = () => {
           <div className="relative">
             <div className="relative">
               <img
-                src="https://i.ytimg.com/vi/GjTfN4sjW5U/hqdefault.jpg"
+                src="AboutJazz.jpg"
                 alt="Jazz Ferguson - Former Professional Basketball Player"
-                className="w-full h-96 md:h-[500px] md:mt-38 object-cover rounded-2xl shadow-2xl hover:scale-105 transition duration-300"
+                className="w-full h-96   object-cover rounded-2xl shadow-2xl hover:scale-105 transition duration-300"
               />
               
               {/* Decorative Elements */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-emerald-200 to-green-200 rounded-2xl -z-10"></div>
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-teal-200 to-emerald-200 rounded-2xl -z-10"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-200 to-sky-200 rounded-2xl -z-10"></div>
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-indigo-200 to-blue-200 rounded-2xl -z-10"></div>
             </div>
           </div>
         </div>
@@ -95,8 +95,8 @@ const About = () => {
                 className="text-center group"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-200 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <value.icon className="w-8 h-8 text-emerald-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-200 to-sky-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <value.icon className="w-8 h-8 text-blue-600" />
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h4>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>
@@ -106,7 +106,7 @@ const About = () => {
         </div>
 
         {/* Personal Touch */}
-        <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+        <div className="mt-16 bg-gray-100 rounded-2xl p-8 shadow-lg">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">A Little More About Me</h3>
             <p className="text-gray-600 leading-relaxed md:max-w-3xl mx-auto">
