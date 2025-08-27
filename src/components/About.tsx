@@ -69,12 +69,12 @@ const About = () => {
               <img
                 src="AboutJazz.jpg"
                 alt="Jazz Ferguson - Former Professional Basketball Player"
-                className="w-full h-96   object-cover rounded-2xl shadow-2xl hover:scale-105 transition duration-300"
+                className="w-full h-96 md:h-[500px] md:mt-40 object-cover rounded-2xl shadow-2xl hover:scale-105 transition duration-300"
               />
               
               {/* Decorative Elements */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-200 to-sky-200 rounded-2xl -z-10"></div>
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-indigo-200 to-blue-200 rounded-2xl -z-10"></div>
+              {/*<div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-200 to-sky-200 rounded-2xl -z-10"></div>
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-indigo-200 to-blue-200 rounded-2xl -z-10"></div>*/}
             </div>
           </div>
         </div>

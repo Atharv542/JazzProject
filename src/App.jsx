@@ -10,6 +10,7 @@ import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
 import { Toaster } from "react-hot-toast";
 import MotivationalSpeaking from './components/MotivationSpeaking';
+import Gallery from './components/Gallery';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ function App() {
       <About />
       <MotivationalSpeaking/>
       <Testimonials />
+      {/*<Gallery/>*/}
       <BookingForm />
       <Footer />
       <Toaster/>

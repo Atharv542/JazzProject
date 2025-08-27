@@ -186,57 +186,16 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
           >
-            <div className="relative bg-gradient-to-br from-blue-200 via-sky-200 to-indigo-200 rounded-3xl p-8 shadow-2xl overflow-hidden">
-              <div className="relative w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden">
-                <AnimatePresence mode="wait" custom={1}>
-                  <motion.img
-                    key={currentImageIndex}
-                    src={images[currentImageIndex].src}
-                    alt={images[currentImageIndex].alt}
-                    className="absolute inset-0 w-full h-full object-cover object-center rounded-2xl shadow-lg"
-                    custom={1}
-                    variants={slideVariants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                      x: { type: "spring", stiffness: 300, damping: 30 },
-                      opacity: { duration: 0.7 },
-                      scale: { duration: 0.5 }
-                    }}
-                    drag="x"
-                    dragConstraints={{ left: 0, right: 0 }}
-                    dragElastic={1}
-                    onDragEnd={(e, { offset, velocity }) => {
-                      const swipe = swipePower(offset.x, velocity.x);
 
-                      if (swipe < -swipeConfidenceThreshold) {
-                        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-                      } else if (swipe > swipeConfidenceThreshold) {
-                        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-                      }
-                    }}
-                  />
-                </AnimatePresence>
+              <div className="relative w-full h-[400px] md:h-full rounded-2xl overflow-hidden">
+               <img src='Home2-copy.jpg' alt='hero-image'/>
               </div>
               
               {/* Image Indicators */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentImageIndex 
-                        ? 'bg-white shadow-lg scale-125' 
-                        : 'bg-white/50 hover:bg-white/75'
-                    }`}
-                  />
-                ))}
-              </div>
+              
               
               {/* Floating Elements */}
-              <motion.div 
+              {/*<motion.div 
                 className="absolute -top-4 -right-4 bg-gray-100 rounded-2xl p-4 shadow-lg"
                 animate={{ 
                   y: [0, -10, 0],
@@ -250,10 +209,10 @@ const Hero = () => {
               >
                 <Calendar className="w-6 h-6 text-blue-600" />
                 <div className="text-xs font-semibold text-gray-800 mt-1">Book Today</div>
-              </motion.div>
+              </motion.div>*/}
               
               
-            </div>
+            
           </motion.div>
         </div>
       </div>
