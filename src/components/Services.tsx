@@ -47,14 +47,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 bg-stone-50 border-t-1 border-amber-200  ">
+      <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Elite Performance
-            <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-              Coaching Services
+           Unleash Your Mindset, 
+            <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-700">
+              Unlock Your Potential
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -68,14 +68,14 @@ const Services = () => {
           {services.slice(0, 4).map((service, index) => (
             <div
               key={service.title}
-              className="group bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-blue-100"
+              className="group bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-amber-200"
               style={{
                 animationDelay: `${index * 0.1}s`
               }}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-200 to-sky-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-yellow-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <service.icon className="w-8 h-8 text-amber-700" />
               </div>
 
               {/* Content */}
@@ -87,19 +87,10 @@ const Services = () => {
                 <div className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-indigo-600" />
+                      <CheckCircle className="w-4 h-4 text-yellow-700" />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </div>
                   ))}
-                </div>
-
-                {/* Session Info */}
-                <div className="flex items-center justify-between pt-4 border-t border-blue-100">
-                  <div className="flex items-center space-x-2 text-sm text-gray-600">
-                    <Clock className="w-4 h-4" />
-                    <span>{service.duration}</span>
-                  </div>
-                  <div className="text-xl font-bold text-blue-600">{service.price}</div>
                 </div>
               </div>
             </div>
@@ -107,16 +98,16 @@ const Services = () => {
         </div>
 
         {/* Elite Mentorship Program - Featured */}
-        <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 shadow-xl border-2 border-indigo-200 mb-16">
+        <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-xl border-2 border-orange-300 mb-16">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="flex-shrink-0">
-              <div className="w-20 h-20 bg-gradient-to-br from-indigo-200 to-blue-200 rounded-2xl flex items-center justify-center">
-                <Users className="w-10 h-10 text-indigo-600" />
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl flex items-center justify-center">
+                <Users className="w-10 h-10 text-orange-700" />
               </div>
             </div>
             
             <div className="flex-1 text-center lg:text-left">
-              <div className="inline-block bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+              <div className="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
                 SIGNATURE PROGRAM
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Elite Mentorship Program</h3>
@@ -128,7 +119,7 @@ const Services = () => {
               <div className="grid md:grid-cols-2 gap-4 mb-6">
                 {services[4].features.map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-orange-700" />
                     <span className="text-sm text-gray-700">{feature}</span>
                   </div>
                 ))}
@@ -138,27 +129,27 @@ const Services = () => {
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center space-x-2 text-sm text-gray-600">
                     <Clock className="w-4 h-4" />
-                    <span>12-week comprehensive program</span>
+                    <span>3 to 12 months comprehensive program</span>
                   </div>
-                  <div className="text-2xl font-bold text-indigo-600">From $2,500</div>
+                
                 </div>
-                <button className="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300">
+                {/*<button className="bg-orange-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-800 transform hover:scale-105 transition-all duration-300">
                   Learn More
-                </button>
+                </button>*/}
               </div>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Develop Your Champion Mindset?</h3>
-          <p className="text-lg mb-6 opacity-90">
+        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 rounded-2xl p-8 border-2 border-amber-200 shadow-lg text-center">
+          <h3 className="text-3xl font-bold mb-4 text-gray-900">Ready to Develop Your Champion Mindset?</h3>
+          <p className="text-lg mb-6 text-gray-700">
             Book a free 30-minute strategy session to discuss your goals and create your winning game plan.
           </p>
           <button 
             onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white cursor-pointer text-blue-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-amber-500 to-yellow-500 cursor-pointer text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Schedule Free Strategy Session
           </button>

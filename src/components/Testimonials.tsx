@@ -10,15 +10,15 @@ const Testimonials = () => {
       title: 'Business Executive',
       image: 'nopp.jpg',
       rating: 5,
-      text: 'Working with Jazz has been a truly transformative experience. His positive energy and genuine presence created a safe, welcoming space where I felt completely supported. Jazz has an incredible ability to listen deeply, helping me uncover blind spots I hadn’t even realized were there. What stood out most was his flexibility in tuning into my personality and views on life. This made me feel completely like myself while also empowering me to shift perspectives and make meaningful changes to improve my life. I’m so grateful for the growth I’ve achieved with Jazz’s help—he’s truly exceptional at what he does.',
+      text: 'Working with Jazz has been a truly transformative experience. His positive energy and genuine presence created a safe, welcoming space where I felt completely supported. Jazz has an incredible ability to listen deeply, helping me uncover blind spots I had not even realized were there. What stood out most was his flexibility in tuning into my personality and views on life. This made me feel completely like myself while also empowering me to shift perspectives and make meaningful changes to improve my life. I am so grateful for the growth I have achieved with Jazz\'s help—he\'s truly exceptional at what he does.',
       result: 'Promoted to VP and leading a team of 50+ people'
     },
     {
-      name: 'Tina Allen',
+      name: 'Tina Allen',
       title: 'Entrepreneur',
       image: 'nopp.jpg',
       rating: 5,
-      text: 'Jazz has a truly unique way of pointing you in the right direction—not by telling you what to do, but by gently guiding you toward your own clarity. His perspective is refreshing and often exactly what I need to shift how I see a situation. Through his thoughtful encouragement and intuitive insight, I’ve discovered my niche and gained a deeper understanding of myself. Jazz doesn’t just coach—he creates space for transformation. I’m so grateful for his presence and the way he leads with both wisdom and heart.',
+      text: 'Jazz has a truly unique way of pointing you in the right direction—not by telling you what to do, but by gently guiding you toward your own clarity. His perspective is refreshing and often exactly what I need to shift how I see a situation. Through his thoughtful encouragement and intuitive insight, I\'ve discovered my niche and gained a deeper understanding of myself. Jazz does not just coach—he creates space for transformation. I\'m so grateful for his presence and the way he leads with both wisdom and heart.',
       result: 'Scaled startup to $2M revenue in 18 months'
     }
     
@@ -45,13 +45,13 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-20 border-t-1 border-amber-200  bg-stone-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Client
-            <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+            <span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-700">
               Victory Stories
             </span>
           </h2>
@@ -63,9 +63,9 @@ const Testimonials = () => {
 
         {/* Testimonial Carousel */}
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl p-8 md:p-12 shadow-lg border border-blue-100 min-h-[400px] flex flex-col justify-center">
+          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-8 md:p-12 shadow-lg border border-amber-200 min-h-[400px] flex flex-col justify-center">
             {/* Quote Icon */}
-            <Quote className="w-12 h-12 text-blue-300 mb-6" />
+            <Quote className="w-12 h-12 text-amber-300 mb-6" />
             
             {/* Testimonial Content */}
             <div className="space-y-6">
@@ -74,8 +74,8 @@ const Testimonials = () => {
               </p>
 
               {/* Result */}
-              <div className="bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg p-2 md:p-4 border-l-4 border-blue-400">
-                <p className="text-[12px] font-semibold text-blue-800 mb-1">Victory Achieved:</p>
+              <div className="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-2 md:p-4 border-l-4 border-amber-500">
+                <p className="text-[12px] font-semibold text-amber-800 mb-1">Victory Achieved:</p>
                 <p className="text-[12px] text-gray-700">{testimonials[currentIndex].result}</p>
               </div>
 
@@ -85,7 +85,7 @@ const Testimonials = () => {
                   <img
                     src={testimonials[currentIndex].image}
                     alt={testimonials[currentIndex].name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-blue-200"
+                    className="w-16 h-16 rounded-full object-cover border-2 border-amber-300"
                   />
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">
@@ -108,16 +108,16 @@ const Testimonials = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevTestimonial}
-            className="absolute hidden -left-15 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-100 rounded-full shadow-lg border border-blue-200 md:flex md:items-center md:justify-center hover:bg-blue-50 transition-colors duration-300"
+            className="absolute hidden -left-15 top-1/2 -translate-y-1/2 w-12 h-12 bg-stone-100 rounded-full shadow-lg border border-amber-300 md:flex md:items-center md:justify-center hover:bg-amber-50 transition-colors duration-300"
           >
-            <ChevronLeft className="w-6 h-6 cursor-pointer hidden md:block text-blue-600" />
+            <ChevronLeft className="w-6 h-6 cursor-pointer hidden md:block text-amber-700" />
           </button>
           
           <button
             onClick={nextTestimonial}
-            className="absolute hidden -right-15 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-100 rounded-full shadow-lg border border-blue-200 md:flex md:items-center md:justify-center hover:bg-blue-50 transition-colors duration-300"
+            className="absolute hidden -right-15 top-1/2 -translate-y-1/2 w-12 h-12 bg-stone-100 rounded-full shadow-lg border border-amber-300 md:flex md:items-center md:justify-center hover:bg-amber-50 transition-colors duration-300"
           >
-            <ChevronRight className="w-6 h-6 cursor-pointer hidden md:block text-blue-600" />
+            <ChevronRight className="w-6 h-6 cursor-pointer hidden md:block text-amber-700" />
           </button>
         </div>
 
@@ -129,8 +129,8 @@ const Testimonials = () => {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? 'bg-blue-600 w-8'
-                  : 'bg-blue-200 hover:bg-blue-300'
+                  ? 'bg-amber-600 w-8'
+                  : 'bg-amber-200 hover:bg-amber-300'
               }`}
             />
           ))}

@@ -32,8 +32,8 @@ function App() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <Services />
       <About />
+      <Services />
       <MotivationalSpeaking/>
       <Testimonials />
       {/*<Gallery/>*/}

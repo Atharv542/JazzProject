@@ -100,7 +100,7 @@ if (submitted) {
   return (
     <section
       id="booking"
-      className="py-20 bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-50"
+      className="py-20 bg-gradient-to-br from-stone-50 via-amber-50 to-yellow-50"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center relative">
@@ -113,9 +113,9 @@ if (submitted) {
             <X className="w-6 h-6" />
           </button>
 
-          <div className="bg-gray-100 rounded-2xl p-12 shadow-lg">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-200 to-blue-300 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-blue-600" />
+          <div className="bg-stone-100 rounded-2xl p-12 shadow-lg">
+            <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="w-10 h-10 text-amber-700" />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Thank You!
@@ -125,26 +125,26 @@ if (submitted) {
               touch within 24 hours to confirm your appointment and send you
               the meeting details.
             </p>
-            <div className="bg-gradient-to-r from-blue-50 to-sky-50 rounded-lg p-6 border border-blue-200">
+            <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-lg p-6 border border-amber-200">
               <h3 className="font-semibold text-gray-900 mb-2">
                 What happens next?
               </h3>
               <ul className="text-sm text-gray-600 space-y-2 text-left">
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                   <span>
                     I'll review your submission and confirm your preferred
                     time slot
                   </span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                   <span>
                     You'll receive a calendar invite with meeting details
                   </span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                   <span>I'll send you a champion mindset assessment</span>
                 </li>
               </ul>
@@ -160,15 +160,15 @@ if (submitted) {
 return (
 <section
 id="booking"
-className="py-20 bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-50"
+className="py-20 border-t-1 border-amber-200  bg-gradient-to-br from-stone-50 via-amber-50 to-yellow-50"
 >
 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 {/* Header */}
 <div className="text-center mb-12">
 <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
 Book Your Free
-<span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-Champion Discovery Call
+<span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-700">
+ Discovery Call
 </span>
 </h2>
 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -183,13 +183,13 @@ and this is where your champion journey begins.
     <div className="max-w-4xl mx-auto">
       <form
         onSubmit={handleSubmit}
-        className="bg-gray-100 rounded-2xl p-8 shadow-lg border border-blue-100"
+        className="bg-white rounded-2xl p-8 shadow-lg border border-amber-200"
       >
         <div className="grid md:grid-cols-2 gap-8">
           {/* Personal Information */}
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-gray-900 flex items-center space-x-2">
-              <User className="w-5 h-5 text-blue-600" />
+              <User className="w-5 h-5 text-amber-700" />
               <span>Personal Information</span>
             </h3>
 
@@ -208,7 +208,7 @@ and this is where your champion journey begins.
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-colors ${
+                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors ${
                   errors.name ? "border-red-400" : "border-gray-300"
                 }`}
                 placeholder="Enter your full name"
@@ -236,7 +236,7 @@ and this is where your champion journey begins.
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-colors ${
+                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors ${
                   errors.email ? "border-red-400" : "border-gray-300"
                 }`}
                 placeholder="Enter your email"
@@ -286,7 +286,7 @@ and this is where your champion journey begins.
           {/* Scheduling Information */}
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-gray-900 flex items-center space-x-2">
-              <Calendar className="w-5 h-5 text-blue-600" />
+              <Calendar className="w-5 h-5 text-amber-700" />
               <span>Scheduling</span>
             </h3>
 
@@ -306,7 +306,7 @@ and this is where your champion journey begins.
                 value={formData.preferredDate}
                 onChange={handleChange}
                 min={new Date().toISOString().split("T")[0]}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-colors ${
+                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors ${
                   errors.preferredDate
                     ? "border-red-400"
                     : "border-gray-300"
@@ -334,7 +334,7 @@ and this is where your champion journey begins.
                 value={formData.service}
                 required
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-colors ${
+                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors ${
                   errors.service ? "border-red-400" : "border-gray-300"
                 }`}
               >
@@ -366,7 +366,7 @@ and this is where your champion journey begins.
                 name="hearAbout"
                 value={formData.hearAbout}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors"
               >
                 <option value="">Select an option</option>
                 <option value="google">Google Search</option>
@@ -382,7 +382,7 @@ and this is where your champion journey begins.
         {/* Full Width Questions */}
         <div className="mt-8 space-y-6">
           <h3 className="text-xl font-semibold text-gray-900 flex items-center space-x-2">
-            <MessageCircle className="w-5 h-5 text-blue-600" />
+            <MessageCircle className="w-5 h-5 text-amber-700" />
             <span>Tell Me About Yourself</span>
           </h3>
 
@@ -401,7 +401,7 @@ and this is where your champion journey begins.
               value={formData.challenges}
               onChange={handleChange}
               rows={4}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-colors resize-none ${
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors resize-none ${
                 errors.challenges ? "border-red-400" : "border-gray-300"
               }`}
               placeholder="Tell me about the obstacles you're ready to overcome..."
@@ -428,7 +428,7 @@ and this is where your champion journey begins.
               value={formData.goals}
               onChange={handleChange}
               rows={3}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-colors resize-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors resize-none"
               placeholder="Describe your goals and what victory looks like to you..."
             />
           </div>
@@ -446,7 +446,7 @@ and this is where your champion journey begins.
               name="experience"
               value={formData.experience}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors"
             >
               <option value="">Select an option</option>
               <option value="no">No, this would be my first time</option>
@@ -466,7 +466,7 @@ and this is where your champion journey begins.
           <button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex items-center cursor-pointer space-x-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-3 md:px-8 md:py-4 rounded-full font-semibold text-md md:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="inline-flex items-center cursor-pointer space-x-2 bg-gradient-to-r from-amber-600 to-yellow-600 text-white px-4 py-3 md:px-8 md:py-4 rounded-full font-semibold text-md md:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           >
             
             
