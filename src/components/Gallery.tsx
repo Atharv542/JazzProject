@@ -12,19 +12,19 @@ const Gallery: React.FC = () => {
   // All images
   const allImages = [
     { id: 1, url: '/Group1.jpg', alt: 'Life coaching session', span: 'col-span-2 row-span-2' },
-    { id: 2, url: '/Group2.jpg', alt: 'Basketball training', span: 'col-span-1 row-span-1' },
-    { id: 3, url: '/Group3.jpg', alt: 'Personal development', span: 'col-span-1 row-span-1' },
-    { id: 4, url: '/Group4.jpg', alt: 'Athletic mindset', span: 'col-span-1 row-span-1' },
-    { id: 5, url: '/Group5.jpg', alt: 'Leadership coaching', span: 'col-span-1 row-span-1' },
+    { id: 2, url: '/P1.jpg', alt: 'Basketball training', span: 'col-span-1 row-span-1' },
+    { id: 3, url: '/P3.jpg', alt: 'Personal development', span: 'col-span-1 row-span-1' },
+    { id: 4, url: '/P16.jpg', alt: 'Athletic mindset', span: 'col-span-1 row-span-1' },
+    { id: 5, url: '/P17.jpg', alt: 'Leadership coaching', span: 'col-span-1 row-span-1' },
     { id: 6, url: '/AboutJazz.jpg', alt: 'Home training setup', span: 'col-span-2 row-span-2' },
     { id: 7, url: '/Group7.png', alt: 'Home environment', span: 'col-span-2 row-span-2' },
     { id: 8, url: '/Group8.png', alt: 'Home coaching space', span: 'col-span-2 row-span-2' },
     { id: 9, url: '/Home4.jpg', alt: 'Alternative home view', span: 'col-span-1 row-span-2' },
     { id: 10, url: '/Home1.jpg', alt: 'About Jazz', span: 'col-span-1 row-span-2' },
-    { id: 11, url: '/Home3.jpg', alt: 'About Jazz', span: 'col-span-1 row-span-2' },
-    { id: 12, url: '/Solo1.png', alt: 'About Jazz', span: 'col-span-1 row-span-2' },
-    { id: 13, url: '/Home2-copy.jpg', alt: 'About Jazz', span: 'col-span-1 row-span-2' },
-    { id: 14, url: '/Solo2.png', alt: 'About Jazz', span: 'col-span-1 row-span-2' },
+    { id: 11, url: '/P18.jpg', alt: 'About Jazz', span: 'col-span-1 row-span-2' },
+    { id: 12, url: '/P5.jpg', alt: 'About Jazz', span: 'col-span-1 row-span-2' },
+    { id: 13, url: '/P8.jpg', alt: 'About Jazz', span: 'col-span-1 row-span-2' },
+    { id: 14, url: '/P19.jpg', alt: 'About Jazz', span: 'col-span-1 row-span-2' },
   ];
 
   // Intersection Observer

@@ -40,11 +40,11 @@ const About = () => {
                  Jazz Ferguson
                 </span>
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed mb-6">
-                I spent 15 years as a professional basketball player, competing at the highest levels in the NBA and international leagues. But my greatest victory came when I discovered how to apply the champion mindset to transform lives beyond the court.
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                I’m a 15 year professional basketball player, currently competing at the international level with experience in Italy, France, and Australia with strong ties to NBA players through training and relationships. My career has been built on discipline, confidence, and resilience the same principles I now share as a certified life coach and mentor. My company Reps With Jazz, helps individuals strengthen their mindset, build unshakable confidence, and reach ambitious goals.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                My coaching combines the mental toughness strategies that made me a professional athlete with proven life coaching techniques. Together, we'll develop your winning game plan for success in every area of your life.
+              <p className="text-md text-gray-600 leading-relaxed">
+                My coaching blends the lessons of an elite athlete with proven strategies for personal growth, empowering both professionals and young athletes alike. For aspiring athletes, my Elite Mentorship develops pro-level habits and mindsets through consistency, accountability, and repetition - the same formula that has defined my career.
               </p>
             </div>
 
@@ -69,7 +69,7 @@ const About = () => {
               <img
                 src="AboutJazz.jpg"
                 alt="Jazz Ferguson - Former Professional Basketball Player"
-                className="w-full h-96 md:h-[500px] md:mt-40 object-cover rounded-2xl shadow-2xl hover:scale-105 transition duration-300"
+                className="w-full h-96 md:h-[500px] md:mt-5 object-cover rounded-2xl shadow-2xl hover:scale-105 transition duration-300"
               />
             </div>
           </div>
@@ -106,10 +106,7 @@ const About = () => {
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">A Little More About Me</h3>
             <p className="text-gray-600 leading-relaxed md:max-w-3xl mx-auto">
-              When I'm not coaching, you'll find me on the basketball court mentoring young players, 
-              training at the gym, or spending time with my family. The discipline and dedication that made me a professional athlete now fuels my passion for helping others achieve their dreams. 
-              I bring the same intensity, focus, and commitment to your success that I brought to every game. 
-              Together, we'll develop your champion mindset and create the winning strategies you need to dominate in life.
+              When I’m not coaching, the same focus, consistency, discipline, and self-accountability that fueled my career as a pro athlete continue to drive me. My approach to preparation keeps me aligned with my core values, whether I’m training in the gym, getting reps on the court, or guiding others in their personal growth. I’ve learned that success is built in the quiet moments of repetition and discipline. That’s why I bring the same intensity and passion to creating safe spaces for lifestyle development as I do to my own training. Every rep, on and off the court - is a step toward building the champion mindset.
             </p>
           </div>
         </div>
