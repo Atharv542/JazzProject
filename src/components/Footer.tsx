@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, Mail, Phone, MapPin, Instagram, Linkedin, Facebook, Calendar, Clock } from 'lucide-react';
+import WhatsAppFooterButton from './WhatsappButton';
 
 const Footer = () => {
   const quickLinks = [
@@ -194,6 +195,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
+
     </footer>
   );
 };

@@ -12,21 +12,22 @@ import { Toaster } from "react-hot-toast";
 import MotivationalSpeaking from './components/MotivationSpeaking';
 import Gallery from './components/Gallery';
 
-function App() {
-  const [loading, setLoading] = useState(true);
+import WhatsAppFooterButton from './components/WhatsappButton';
 
-  {/*useEffect(() => {
-    // Simulate loading time for the preloader
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 4000); // 4 seconds to show the full animation
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
-    return () => clearTimeout(timer);
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  if (loading) {
-    return <Preloader />;
-  }*/}
+  return isDesktop;
+}
+
+function App() {
+  const isDesktop = useIsDesktop();
 
   return (
     <div className="min-h-screen">
@@ -36,9 +37,10 @@ function App() {
       <Services />
       <MotivationalSpeaking/>
       <Testimonials />
-      {/*<Gallery/>*/}
+      {isDesktop && <Gallery />}
       <BookingForm />
       <Footer />
+       <WhatsAppFooterButton />
       <Toaster/>
     </div>
   );
