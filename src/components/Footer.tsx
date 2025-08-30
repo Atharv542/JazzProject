@@ -102,9 +102,9 @@ const Footer = () => {
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 -mt-10 text-amber-700" />
+                <Phone className="w-5 h-5  text-amber-700" />
                 <div>
-                  <p className="text-gray-900 font-medium">+31625226724 (WhatsApp), +971582619895</p>
+                  <p className="text-gray-900 font-medium">+971582619895</p>
                   <p className="text-sm text-gray-600">Call or text</p>
                 </div>
               </div>
@@ -149,7 +149,7 @@ const Footer = () => {
                 © {new Date().getFullYear()} Reps With Jazz Life Coaching. All rights reserved.
               </p>
               <p className="text-gray-500 text-xs mt-1">
-                Licensed and Insured | Jay Shetty Certified Professional Coach | Former Professional Athlete
+                Licensed and Insured | Jay Shetty Certified Professional Coach | Professional Athlete
               </p>
             </div>
 
@@ -162,7 +162,14 @@ const Footer = () => {
               </a>
               <button
                 onClick={() => scrollToSection('#booking')}
-                className="bg-gradient-to-r from-amber-600 to-yellow-600 cursor-pointer text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center space-x-1"
+                className="bg-gradient-to-r from-amber-600 md:hidden to-yellow-600 cursor-pointer text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center space-x-1 "
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Connect</span>
+              </button>
+               <button
+                onClick={() => scrollToSection('#booking')}
+                className="bg-gradient-to-r from-amber-600 hidden  to-yellow-600 cursor-pointer text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300 md:flex md:items-center space-x-1 "
               >
                 <Calendar className="w-4 h-4" />
                 <span>Book Now</span>

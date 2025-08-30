@@ -149,9 +149,15 @@ const Services = () => {
           </p>
           <button 
             onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-amber-500 to-yellow-500 cursor-pointer text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-amber-500 to-yellow-500 cursor-pointer hidden md:block md:mx-auto text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Schedule Free Strategy Session
+          </button>
+           <button 
+            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-gradient-to-r from-amber-500 to-yellow-500 cursor-pointer  md:hidden text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+          >
+            Book Now
           </button>
         </div>
       </div>

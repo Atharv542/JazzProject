@@ -82,17 +82,30 @@ const Hero = () => {
       </div>
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid  lg:grid-cols-2 gap-12 items-center">
+          {/* Right Content - Animated Image Carousel */}
+          <motion.div 
+            className="relative order-1 lg:order-2"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+          >
+
+              <div className="relative w-full h-[400px] md:h-full rounded-2xl overflow-hidden -mb-20 md:-mb-0">
+               <img src='Home2-copy.jpg' alt='hero-image'/>
+              </div>
+              
+          </motion.div>
           {/* Left Content */}
           <motion.div 
-            className="space-y-8"
+            className="space-y-8 order-1 "
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="space-y-4">
               <motion.div 
-                className="inline-flex items-center space-x-2 bg-stone-100/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-amber-800 border border-amber-300"
+                className="inline-flex items-center space-x-2 bg-stone-100/80 backdrop-blur-sm px-4 py-2 rounded-full text-[13px] md:text-sm font-medium text-amber-800 border border-amber-300"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -179,19 +192,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Animated Image Carousel */}
-          <motion.div 
-            className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-          >
-
-              <div className="relative w-full h-[400px] md:h-full rounded-2xl overflow-hidden">
-               <img src='Home2-copy.jpg' alt='hero-image'/>
-              </div>
-              
-          </motion.div>
+          
         </div>
       </div>
     </section>
