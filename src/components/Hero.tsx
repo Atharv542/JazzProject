@@ -111,7 +111,7 @@ const Hero = () => {
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
                 <Star className="w-4 h-4 fill-current" />
-                <span>Active Professional Player • Certified Life Coach • Elite Mentor</span>
+                <span>Active Professional Athlete • Certified Life Coach • Elite Mentor</span>
               </motion.div>
               
               <motion.h1 

@@ -43,7 +43,7 @@ const About = () => {
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 I’m a 15 year professional basketball player, currently competing at the international level with experience in Italy, France, and Australia with strong ties to NBA players through training and relationships. My career has been built on discipline, confidence, and resilience the same principles I now share as a certified life coach and mentor. My company Reps With Jazz, helps individuals strengthen their mindset, build unshakable confidence, and reach ambitious goals.
               </p>
-              <p className="text-md text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 My coaching blends the lessons of an elite athlete with proven strategies for personal growth, empowering both professionals and young athletes alike. For aspiring athletes, my Elite Mentorship develops pro-level habits and mindsets through consistency, accountability, and repetition - the same formula that has defined my career.
               </p>
             </div>
@@ -69,7 +69,7 @@ const About = () => {
               <img
                 src="AboutJazz.jpg"
                 alt="Jazz Ferguson - Former Professional Basketball Player"
-                className="w-full h-96 md:h-[500px] md:mt-5 object-cover rounded-2xl shadow-2xl hover:scale-105 transition duration-300"
+                className="w-full h-96 md:h-[500px] md:mt-2 object-cover rounded-2xl shadow-2xl hover:scale-105 transition duration-300"
               />
             </div>
           </div>
