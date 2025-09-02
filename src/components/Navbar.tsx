@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Calendar, Home, Settings, User, MessageSquare } from 'lucide-react';
-import Logo from './Logo';
 
 
 const Navbar = () => {
@@ -48,7 +47,7 @@ const Navbar = () => {
           {/* Animated Logo */}
           
           <div className="flex items-center space-x-2">
-           <img className='w-16 scale-150 -mt-1 ml-2'  src='Jazz_Logo_4.png'/>
+           <img className='w-16 scale-150 -mt-1 ml-2'  src='Jazz_Logo_5.png'/>
            
           </div>
 
