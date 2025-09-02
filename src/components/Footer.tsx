@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'Instagram', href: 'https://www.instagram.com/repswithjazz', icon: Instagram },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'Facebook', href: '#', icon: Facebook }
   ];
@@ -59,8 +59,9 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-stone-100 rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-amber-700 hover:shadow-lg transition-all duration-300"
+                  className="w-10 h-10  bg-stone-100 rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-amber-700 hover:shadow-lg transition-all duration-300"
                   aria-label={social.name}
+                  target='_blank'
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
