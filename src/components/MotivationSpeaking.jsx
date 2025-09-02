@@ -97,10 +97,10 @@ const MotivationalSpeaking = () => {
   ];
 
   const stats = [
-    { icon: Users, number: "10,000+", label: "Students Inspired", color: "amber" },
-    { icon: Building2, number: "500+", label: "Companies Served", color: "yellow" },
+    { icon: Users, number: "500+", label: "Students Inspired", color: "amber" },
+    { icon: Building2, number: "5", label: "Companies Served", color: "yellow" },
     { icon: Award, number: "98%", label: "Satisfaction Rate", color: "orange" },
-    { icon: TrendingUp, number: "5 Years", label: "Speaking Experience", color: "amber" }
+    { icon: TrendingUp, number: "2 Years", label: "Speaking Experience", color: "amber" }
   ];
 
   const scrollToBooking = () => {

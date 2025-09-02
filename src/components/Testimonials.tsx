@@ -139,7 +139,7 @@ const Testimonials = () => {
         {/* Social Proof Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-gray-900">300+</div>
+            <div className="text-3xl font-bold text-gray-900">40+</div>
             <div className="text-sm text-gray-600">Champions Created</div>
           </div>
           <div className="space-y-2">

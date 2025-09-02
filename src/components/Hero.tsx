@@ -92,7 +92,7 @@ const Hero = () => {
           >
 
               <div className="relative w-full h-[400px] md:h-full rounded-2xl overflow-hidden -mb-20 md:-mb-0">
-               <img src='Home2-copy.jpg' alt='hero-image'/>
+               <img src='Home2.jpg' alt='hero-image'/>
               </div>
               
           </motion.div>

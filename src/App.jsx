@@ -13,6 +13,7 @@ import MotivationalSpeaking from './components/MotivationSpeaking';
 import Gallery from './components/Gallery';
 
 import WhatsAppFooterButton from './components/WhatsappButton';
+import LoadingScreen from './components/Preloader';
 
 function useIsDesktop() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Heart, Phone, Mail, Calendar, Home, Settings, User, MessageSquare } from 'lucide-react';
+import { Menu, X, Calendar, Home, Settings, User, MessageSquare } from 'lucide-react';
+import Logo from './Logo';
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,17 +42,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white  shadow-lg border-b border-amber-200/50 z-50 transition-all duration-300">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg border-b border-amber-200/50 z-50 transition-all duration-300">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Animated Logo */}
+          
           <div className="flex items-center space-x-2">
            <img className='w-48 scale-130 md:scale-150 -mt-2 ml-2'  src='MyLogo2.png'/>
            
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-10">
             {navItems.map((item) => {
               const IconComponent = item.icon;
               return (
