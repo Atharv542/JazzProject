@@ -21,8 +21,7 @@ const Footer = () => {
 
   const socialLinks = [
     { name: 'Instagram', href: 'https://www.instagram.com/repswithjazz', icon: Instagram },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Facebook', href: '#', icon: Facebook }
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jazz-ferguson-5258a8219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', icon: Linkedin },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -156,12 +155,7 @@ const Footer = () => {
             </div>
 
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-gray-600 hover:text-amber-700 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-600 hover:text-amber-700 transition-colors">
-                Terms of Service
-              </a>
+              
               <button
                 onClick={() => scrollToSection('#booking')}
                 className="bg-gradient-to-r from-amber-600 md:hidden to-yellow-600 cursor-pointer text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center space-x-1 "

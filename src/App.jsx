@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -11,9 +10,7 @@ import Footer from './components/Footer';
 import { Toaster } from "react-hot-toast";
 import MotivationalSpeaking from './components/MotivationSpeaking';
 import Gallery from './components/Gallery';
-
 import WhatsAppFooterButton from './components/WhatsappButton';
-import LoadingScreen from './components/Preloader';
 
 function useIsDesktop() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
