@@ -48,7 +48,7 @@ const Navbar = () => {
           {/* Animated Logo */}
           
           <div className="flex items-center space-x-2">
-           <img className='w-48 scale-130 md:scale-150 -mt-2 ml-2'  src='MyLogo2.png'/>
+           <img className='w-22 scale-110 -mt-2 ml-2'  src='Jazz_Logo.png'/>
            
           </div>
 
