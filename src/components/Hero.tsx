@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowDown, Star, Users, Award, Calendar } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { ArrowDown, Star, Users, Award, Calendar } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const images = [
+  const images = [
     {
       src: "Home1.jpg",
-      alt: "Professional Basketball Training"
+      alt: "Professional Basketball Training",
     },
     {
       src: "Home2.jpg",
-      alt: "Life Coaching Session"
+      alt: "Life Coaching Session",
     },
     {
       src: "Home3.jpg",
-      alt: "Mental Performance Training"
+      alt: "Mental Performance Training",
     },
     {
       src: "Home4.jpg",
-      alt: "Championship Mindset Development"
-    }
+      alt: "Championship Mindset Development",
+    },
   ];
 
   useEffect(() => {
@@ -33,16 +33,16 @@ const Hero = () => {
   }, [images.length]);
 
   const scrollToBooking = () => {
-    const element = document.getElementById('booking');
+    const element = document.getElementById("booking");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToServices = () => {
-    const element = document.getElementById('services');
+    const element = document.getElementById("services");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -72,7 +72,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-to-br from-stone-50 via-amber-50 to-yellow-50 pt-16">
+    <section
+      id="home"
+      className="relative min-h-screen bg-gradient-to-br from-stone-50 via-amber-50 to-yellow-50 pt-16"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-amber-300"></div>
@@ -84,60 +87,69 @@ const Hero = () => {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div className="grid  lg:grid-cols-2 gap-12 items-center">
           {/* Right Content - Animated Image Carousel */}
-          <motion.div 
+          <motion.div
             className="relative order-1 lg:order-2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
           >
-
-              <div className="relative w-full h-[400px] md:h-full rounded-2xl overflow-hidden -mb-20 md:-mb-0">
-               <img src='Home2.jpg' alt='hero-image'/>
-              </div>
-              
+            <div className="relative w-full h-[400px] md:h-full rounded-2xl overflow-hidden -mb-20 md:-mb-0">
+              <img src="Home2.jpg" alt="hero-image" />
+            </div>
           </motion.div>
           {/* Left Content */}
-          <motion.div 
+          <motion.div
             className="space-y-8 order-1 "
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="space-y-4">
-              <motion.div 
+              <motion.div
                 className="inline-flex items-center space-x-2 bg-stone-100/80 backdrop-blur-sm px-4 py-2 rounded-full text-[13px] md:text-sm font-medium text-amber-800 border border-amber-300"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
                 <Star className="w-4 h-4 fill-current" />
-                <span>Active Professional Athlete • Certified Life Coach • Elite Mentor</span>
+                <span>
+                  Active Professional Athlete • Certified Life Coach • Elite
+                  Mentor
+                </span>
               </motion.div>
-              
-              <motion.h1 
+
+              <motion.h1
                 className="text-2xl sm:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                Reps Remove All Doubt:
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-700">
-                  Champion Mindset
+                Mental Performance Coach-
+                <span className="text-gray-700 text-xl md:text-4xl italic">
+                  {" "}
+                  for Youth and Adults
+                </span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-700 mt-3">
+                  Mentor for Young Leaders
                 </span>
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 className="text-xl text-gray-600 leading-relaxed max-w-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
               >
-                As an active professional basketball player with 15+ years of experience, I know firsthand that discipline, consistency, and the right reps build unshakeable confidence. I help ambitious individuals develop the mental toughness and winning strategies that create champions in sports and life.
+                As an active professional basketball player with 15+ years of
+                international experience, I know firsthand that discipline,
+                consistency, and the right reps build unshakeable confidence. I
+                help ambitious individuals develop the mental toughness and
+                winning strategies that create champions in sports and life.
               </motion.p>
             </div>
 
             {/* CTA Buttons */}
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -150,7 +162,7 @@ const Hero = () => {
                 <span>Connect Now</span>
                 <ArrowDown className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              
+
               <button
                 onClick={scrollToServices}
                 className="border-2 cursor-pointer border-amber-400 text-amber-700 px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-50 transition-all duration-300"
@@ -160,7 +172,7 @@ const Hero = () => {
             </motion.div>
 
             {/* Stats */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-3 gap-8 pt-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -173,15 +185,17 @@ const Hero = () => {
                 <div className="text-2xl font-bold text-gray-900">300+</div>
                 <div className="text-sm text-gray-600">Lives Transformed</div>
               </div>
-              
+
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Award className="w-8 h-8 text-yellow-700" />
                 </div>
                 <div className="text-2xl font-bold text-gray-900">15+</div>
-                <div className="text-sm text-gray-600">Years Pro Basketball</div>
+                <div className="text-sm text-gray-600">
+                  Years Pro Basketball
+                </div>
               </div>
-              
+
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Star className="w-8 h-8 text-orange-600 fill-current" />
@@ -191,8 +205,6 @@ const Hero = () => {
               </div>
             </motion.div>
           </motion.div>
-
-          
         </div>
       </div>
     </section>

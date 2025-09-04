@@ -12,7 +12,7 @@ const About = () => {
   const values = [
     {
       icon: Heart,
-      title: 'Mental Toughness',
+      title: 'Mental Strength',
       description: 'I help you develop the same mental resilience that champions use to overcome any obstacle.'
     },
     {
@@ -44,7 +44,7 @@ const About = () => {
                 I’m a 15 year professional basketball player, currently competing at the international level with experience in Italy, France, and Australia with strong ties to NBA players through training and relationships. My career has been built on discipline, confidence, and resilience the same principles I now share as a certified life coach and mentor. My company Reps With Jazz, helps individuals strengthen their mindset, build unshakable confidence, and reach ambitious goals.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                My coaching blends the lessons of an elite athlete with proven strategies for personal growth, empowering both professionals and young athletes alike. For aspiring athletes, my Elite Mentorship develops pro-level habits and mindsets through consistency, accountability, and repetition - the same formula that has defined my career.
+                My coaching blends the lessons of an elite leader with proven strategies for personal growth, empowering both professionals and young individuals alike. For aspiring individuals, my Elite Mentorship develops pro-level habits and mindsets through consistency, accountability, and repetition - the same formula that has defined my career.
               </p>
             </div>
 
