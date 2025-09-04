@@ -125,11 +125,11 @@ const Hero = () => {
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 Mental Performance Coach
-                <span className="text-gray-700 text-lg md:text-4xl italic block mt-2 font-medium">
+                <span className="text-gray-700 text-lg md:text-2xl italic block mt-2 font-medium">
                   {" "}
                   for Youth and Adults
                 </span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-700 mt-3">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-700 mt-2">
                   Mentor for Young Leaders
                 </span>
               </motion.h1>
