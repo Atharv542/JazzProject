@@ -124,8 +124,8 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                Mental Performance Coach-
-                <span className="text-gray-700 text-xl md:text-4xl italic">
+                Mental Performance Coach
+                <span className="text-gray-700 text-lg md:text-4xl italic block mt-2 font-medium">
                   {" "}
                   for Youth and Adults
                 </span>
