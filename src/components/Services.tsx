@@ -112,7 +112,7 @@ const Services = () => {
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Elite Mentorship Program</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Designed for ambitious young individuals who want to develop the mindset, athletic capabilities and life skill of a leader. 
+                Designed for ambitious young individuals who want to develop the mindset, athletic capabilities and life skills of a leader. 
                 This comprehensive program addresses challenges such as social pressure, anxiety, focus, discipline, habit-building, and goal clarity.
               </p>
               
