@@ -1,497 +1,136 @@
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
-import {  X } from "lucide-react"; // 👈 add X here
-import {
-Calendar,
-Clock,
-User,
-Mail,
-Phone,
-MessageCircle,
-Send,
-CheckCircle,
-AlertCircle,
-} from "lucide-react";
+import { motion } from "framer-motion";
+import { Calendar, Sparkles, Clock, ArrowRight, X, Target, Trophy, Lightbulb } from "lucide-react";
 
-import toast from "react-hot-toast";
 const BookingForm = () => {
-const initialFormData = {
-name: "",
-email: "",
-phone: "",
-service: "",
-preferredDate: "",
-preferredTime: "",
-timezone: "",
-challenges: "",
-goals: "",
-experience: "",
-hearAbout: "",
-};
-const [formData, setFormData] = useState({
-name: "",
-email: "",
-phone: "",
-service: "",
-preferredDate: "",
-preferredTime: "",
-timezone: "",
-challenges: "",
-goals: "",
-experience: "",
-hearAbout: "",
-});
+  const [showCalendly, setShowCalendly] = useState(false);
 
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitted, setSubmitted] = useState(false);
-const [errors, setErrors] = useState<{ [key: string]: string }>({});
-
-const services = [
-"Accountability Partner",
-"Mental Strengthening",
-"Confidence Building",
-"Performance Outlook Maintenance",
-"Elite Mentorship Program",
-"Motivational Speaking Engagement",
-"Confidence Building Workshop",
-"Not sure yet - let's discuss",
-];
-
-const handleChange = (e) => {
-setFormData({
-...formData,
-[e.target.name]: e.target.value,
-});
-if (errors[e.target.name]) {
-setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
-}
-};
-
-const handleSubmit = async (e) => {
-e.preventDefault();
-setIsSubmitting(true);
-
-try {
-await emailjs.send(
-import.meta.env.VITE_EMAIL_SERVICE_ID,
-import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-formData,
-import.meta.env.VITE_EMAIL_PUBLIC_KEY_ID// replace with your EmailJS public key
-);
-
-
-setIsSubmitting(false);
-setSubmitted(true);
-setFormData(initialFormData)
-toast.success("Congratulations! Your form is submitted")
-} catch (error) {
-console.error("EmailJS Error:", error);
-setIsSubmitting(false);
-toast.error("Something went wrong. Please try again.");
-}
-};
-
-
-
-
-if (submitted) {
   return (
     <section
       id="booking"
-      className="py-20 bg-gradient-to-br from-stone-50 via-amber-50 to-yellow-50"
+      className="relative py-28 overflow-hidden bg-gradient-to-br from-amber-50 via-yellow-50 to-stone-100  border-t border-amber-200"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center relative">
-          
-          {/* ❌ Close Icon */}
-          <button
-            onClick={() => setSubmitted(false)}
-            className="absolute top-4 right-4 cursor-pointer text-gray-500 hover:text-gray-700 transition"
-          >
-            <X className="w-6 h-6" />
-          </button>
+      {/* ✨ Background Glow Effects */}
+      <div className="absolute inset-0">
+        <motion.div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-amber-200/40 rounded-full blur-3xl opacity-50"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity }}
+        ></motion.div>
+      </div>
 
-          <div className="bg-stone-100 rounded-2xl p-12 shadow-lg">
-            <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-amber-700" />
+      <div className="relative z-10 container mx-auto px-6 text-center">
+        {/* 🌟 Hero Heading */}
+        <h2 className="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
+          Step Into Your
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-600">
+            Champion Era
+          </span>
+        </h2>
+
+        {/* 💬 Subheading */}
+        <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-16">
+          Discover how elite performers build unstoppable confidence, mental
+          strength, and resilience. Your transformation starts with a single
+          conversation — your <strong>free discovery call</strong>.
+        </p>
+
+        {/* 🛤️ 3-Step Animated Timeline */}
+        <motion.div
+        
+          className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16"
+        >
+          {[
+            {
+              icon: <Lightbulb className="w-8 h-8 text-amber-600" />,
+              title: "Gain Clarity",
+              desc: "We'll uncover your goals, challenges, and blind spots.",
+            },
+            {
+              icon: <Target className="w-8 h-8 text-amber-600" />,
+              title: "Create Your Plan",
+              desc: "Together, we’ll design a winning mindset strategy.",
+            },
+            {
+              icon: <Trophy className="w-8 h-8 text-amber-600" />,
+              title: "Achieve Victory",
+              desc: "Walk away with clarity, focus, and unstoppable drive.",
+            },
+          ].map((step, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              className="bg-white/70 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-amber-100 transition"
+            >
+              <div className="flex justify-center mb-4">{step.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+              <p className="text-gray-600 text-sm">{step.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* 🪄 Book Button */}
+        {!showCalendly && (
+          <motion.button
+            whileHover={{ scale: 1.08, boxShadow: "0 0 25px rgba(245, 158, 11, 0.4)" }}
+            whileTap={{ scale: 0.96 }}
+            onClick={() => setShowCalendly(true)}
+            className="inline-flex cursor-pointer items-center space-x-3 bg-gradient-to-r from-amber-600 to-yellow-600 text-white px-10 py-5 rounded-full font-semibold text-xl shadow-lg transition-all duration-300"
+          >
+            <Calendar className="w-6 h-6" />
+            <span>Book Your Free Discovery Call</span>
+            <ArrowRight className="w-6 h-6" />
+          </motion.button>
+        )}
+
+        {/* 🗓️ Calendly Popup */}
+        {showCalendly && (
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="mt-20 bg-white/80 backdrop-blur-lg rounded-2xl border border-amber-200 shadow-2xl relative max-w-5xl mx-auto p-6"
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setShowCalendly(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition"
+            >
+              <X className="w-7 h-7" />
+            </button>
+
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 flex items-center justify-center gap-2">
+              <Clock className="w-7 h-7 text-amber-700" />
+              Schedule Your Call
+            </h3>
+
+            <div className="flex justify-center">
+              <iframe
+                src="https://calendly.com/repswithjazz/30min"
+                width="100%"
+                height="650"
+                className="border-0 rounded-xl shadow-md"
+                allowFullScreen
+              ></iframe>
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Thank You!
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Your discovery call request has been received. I'll be in
-              touch within 24 hours to confirm your appointment and send you
-              the meeting details.
+
+            <p className="text-sm text-gray-500 mt-4">
+              Choose a time that fits your schedule — confirmation will be sent
+              to your email instantly.
             </p>
-            <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-lg p-6 border border-amber-200">
-              <h3 className="font-semibold text-gray-900 mb-2">
-                What happens next?
-              </h3>
-              <ul className="text-sm text-gray-600 space-y-2 text-left">
-                <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                  <span>
-                    I'll review your submission and confirm your preferred
-                    time slot
-                  </span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                  <span>
-                    You'll receive a calendar invite with meeting details
-                  </span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                  <span>I'll send you a champion mindset assessment</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          </motion.div>
+        )}
+
+        {/* ⚡ Bottom Animated Timeline Line */}
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "100%" }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+          className="mt-28 h-[3px] bg-gradient-to-r from-transparent via-amber-400 to-transparent"
+        ></motion.div>
       </div>
     </section>
   );
-}
-
-
-return (
-<section
-id="booking"
-className="py-20 border-t-1 border-amber-200  bg-gradient-to-br from-stone-50 via-amber-50 to-yellow-50"
->
-<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-{/* Header */}
-<div className="text-center mb-12">
-<h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-Book Your Free
-<span className="block leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-yellow-700">
- Discovery Call
-</span>
-</h2>
-<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-Ready to develop your champion mindset? Let's connect and create
-your winning game plan for success. Remember, reps remove all doubt - 
-and this is where your champion journey begins.
-</p>
-</div>
-
-
-    {/* Form */}
-    <div className="max-w-4xl mx-auto">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white rounded-2xl p-8 shadow-lg border border-amber-200"
-      >
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Personal Information */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-gray-900 flex items-center space-x-2">
-              <User className="w-5 h-5 text-amber-700" />
-              <span>Personal Information</span>
-            </h3>
-
-            {/* Name */}
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Full Name *
-              </label>
-              <input
-                required
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors ${
-                  errors.name ? "border-red-400" : "border-gray-300"
-                }`}
-                placeholder="Enter your full name"
-              />
-              {errors.name && (
-                <div className="flex items-center space-x-1 mt-1 text-red-600">
-                  <AlertCircle className="w-4 h-4" />
-                  <span className="text-sm">{errors.name}</span>
-                </div>
-              )}
-            </div>
-
-            {/* Email */}
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Email Address *
-              </label>
-              <input
-                type="email"
-                id="email"
-                required
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors ${
-                  errors.email ? "border-red-400" : "border-gray-300"
-                }`}
-                placeholder="Enter your email"
-              />
-              {errors.email && (
-                <div className="flex items-center space-x-1 mt-1 text-red-600">
-                  <AlertCircle className="w-4 h-4" />
-                  <span className="text-sm">{errors.email}</span>
-                </div>
-              )}
-            </div>
-
-            {/* Phone */}
-            <div>
-              <label
-                htmlFor="phone"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Phone Number *
-              </label>
-        <PhoneInput
-          country={"us"}
-          value={formData.phone}
-          onChange={(phone) => setFormData({ ...formData, phone })}
-          inputClass="!w-full !h-12 !text-sm"
-          inputStyle={{
-            width: "100%",
-            borderRadius: "0.5rem",
-            border: "1px solid #D1D5DB",
-          }}
-          enableSearch={true}
-          specialLabel={null}
-          inputProps={{
-            name: "phone",
-          }}
-          required
-        />
-              {errors.phone && (
-                <div className="flex items-center space-x-1 mt-1 text-red-600">
-                  <AlertCircle className="w-4 h-4" />
-                  <span className="text-sm">{errors.phone}</span>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Scheduling Information */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-gray-900 flex items-center space-x-2">
-              <Calendar className="w-5 h-5 text-amber-700" />
-              <span>Scheduling</span>
-            </h3>
-
-            {/* Preferred Date */}
-            <div>
-              <label
-                htmlFor="preferredDate"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Preferred Date *
-              </label>
-              <input
-                type="date"
-                id="preferredDate"
-                required
-                name="preferredDate"
-                value={formData.preferredDate}
-                onChange={handleChange}
-                min={new Date().toISOString().split("T")[0]}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors ${
-                  errors.preferredDate
-                    ? "border-red-400"
-                    : "border-gray-300"
-                }`}
-              />
-              {errors.preferredDate && (
-                <div className="flex items-center space-x-1 mt-1 text-red-600">
-                  <AlertCircle className="w-4 h-4" />
-                  <span className="text-sm">{errors.preferredDate}</span>
-                </div>
-              )}
-            </div>
-
-            {/* Service */}
-            <div>
-              <label
-                htmlFor="service"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Interested Service *
-              </label>
-              <select
-                id="service"
-                name="service"
-                value={formData.service}
-                required
-                onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors ${
-                  errors.service ? "border-red-400" : "border-gray-300"
-                }`}
-              >
-                <option value="">Select a service</option>
-                {services.map((service) => (
-                  <option key={service} value={service}>
-                    {service}
-                  </option>
-                ))}
-              </select>
-              {errors.service && (
-                <div className="flex items-center space-x-1 mt-1 text-red-600">
-                  <AlertCircle className="w-4 h-4" />
-                  <span className="text-sm">{errors.service}</span>
-                </div>
-              )}
-            </div>
-
-            {/* How did you hear about us */}
-            <div>
-              <label
-                htmlFor="hearAbout"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                How did you hear about me?
-              </label>
-              <select
-                id="hearAbout"
-                name="hearAbout"
-                value={formData.hearAbout}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors"
-              >
-                <option value="">Select an option</option>
-                <option value="google">Google Search</option>
-                <option value="social-media">Social Media</option>
-                <option value="referral">Friend/Colleague Referral</option>
-                <option value="website">Your Website</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        {/* Full Width Questions */}
-        <div className="mt-8 space-y-6">
-          <h3 className="text-xl font-semibold text-gray-900 flex items-center space-x-2">
-            <MessageCircle className="w-5 h-5 text-amber-700" />
-            <span>Tell Me About Yourself</span>
-          </h3>
-
-          {/* Current Challenges */}
-          <div>
-            <label
-              htmlFor="challenges"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              What challenges are you ready to dominate? *
-            </label>
-            <textarea
-              id="challenges"
-              name="challenges"
-              required
-              value={formData.challenges}
-              onChange={handleChange}
-              rows={4}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors resize-none ${
-                errors.challenges ? "border-red-400" : "border-gray-300"
-              }`}
-              placeholder="Tell me about the obstacles you're ready to overcome..."
-            />
-            {errors.challenges && (
-              <div className="flex items-center space-x-1 mt-1 text-red-600">
-                <AlertCircle className="w-4 h-4" />
-                <span className="text-sm">{errors.challenges}</span>
-              </div>
-            )}
-          </div>
-
-          {/* Goals */}
-          <div>
-            <label
-              htmlFor="goals"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              What victories do you want to achieve?
-            </label>
-            <textarea
-              id="goals"
-              name="goals"
-              value={formData.goals}
-              onChange={handleChange}
-              rows={3}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors resize-none"
-              placeholder="Describe your goals and what victory looks like to you..."
-            />
-          </div>
-
-          {/* Coaching Experience */}
-          <div>
-            <label
-              htmlFor="experience"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              Have you worked with a coach or therapist before?
-            </label>
-            <select
-              id="experience"
-              name="experience"
-              value={formData.experience}
-              onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-200 focus:border-amber-600 transition-colors"
-            >
-              <option value="">Select an option</option>
-              <option value="no">No, this would be my first time</option>
-              <option value="coach">
-                Yes, I've worked with a coach before
-              </option>
-              <option value="therapist">
-                Yes, I've worked with a therapist
-              </option>
-              <option value="both">Yes, I've worked with both</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Submit Button */}
-        <div className="mt-8 text-center">
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="inline-flex items-center cursor-pointer space-x-2 bg-gradient-to-r from-amber-600 to-yellow-600 text-white px-4 py-3 md:px-8 md:py-4 rounded-full font-semibold text-md md:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-          >
-            
-            
-              <>
-                <Send className="w-5 h-5" />
-                {/* Mobile text */}
-                <span className="block md:hidden">Connect Now</span>
-                {/* Desktop / Tablet text */}
-                <span className="hidden md:block">
-                  Book Your Free Discovery Call
-                </span>
-              </>
-            
-          </button>
-
-          <p className="text-[12px] md:text-sm text-gray-500 mt-4">
-            * This discovery call is completely free with no obligation.
-            Let's create your winning game plan!
-          </p>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-);
 };
 
 export default BookingForm;

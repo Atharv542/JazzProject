@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Calendar, Home, Settings, User, MessageSquare,Headphones } from 'lucide-react';
+import { Menu, X, Calendar, Home, Settings, User, MessageSquare,Radio } from 'lucide-react';
 
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
     { id: 'home', label: 'Home', icon: Home },
     { id: 'about', label: 'About', icon: User },
     { id: 'services', label: 'Services', icon: Settings },
-    { id: 'podcast', label: 'Podcast', icon: Headphones },
+   { id: 'activities', label: 'Recent Activities', icon: Radio },
     { id: 'testimonials', label: 'Testimonials', icon: MessageSquare },
     { id: 'booking', label: 'Book Session', icon: Calendar },
   ];

@@ -11,7 +11,7 @@ import { Toaster } from "react-hot-toast";
 import MotivationalSpeaking from './components/MotivationSpeaking';
 import Gallery from './components/Gallery';
 import WhatsAppFooterButton from './components/WhatsappButton';
-import PodcastPage from './components/PodcastPage';
+import RecentActivities from './components/RecentActivities';
 
 function useIsDesktop() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
@@ -35,7 +35,7 @@ function App() {
       <About />
       <Services />
       <MotivationalSpeaking/>
-      <PodcastPage/>
+      {/*<RecentActivities/>*/}
       <Testimonials />
       {isDesktop && <Gallery />}
       <BookingForm />
