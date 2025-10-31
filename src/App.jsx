@@ -35,7 +35,7 @@ function App() {
       <About />
       <Services />
       <MotivationalSpeaking/>
-      {/*<RecentActivities/>*/}
+      <RecentActivities/>
       <Testimonials />
       {isDesktop && <Gallery />}
       <BookingForm />

@@ -75,7 +75,7 @@ const BookingForm = () => {
             whileHover={{ scale: 1.08, boxShadow: "0 0 25px rgba(245, 158, 11, 0.4)" }}
             whileTap={{ scale: 0.96 }}
             onClick={() => setShowCalendly(true)}
-            className="inline-flex cursor-pointer items-center space-x-3 bg-gradient-to-r from-amber-600 to-yellow-600 text-white px-10 py-5 rounded-full font-semibold text-xl shadow-lg transition-all duration-300"
+            className="inline-flex cursor-pointer items-center space-x-3 bg-gradient-to-r from-amber-600 to-yellow-600 text-white px-5 py-2 md:px-10 md:py-5 rounded-xl md:rounded-full font-semibold text-md md:text-xl shadow-lg transition-all duration-300"
           >
             <Calendar className="w-6 h-6" />
             <span>Book Your Free Discovery Call</span>
