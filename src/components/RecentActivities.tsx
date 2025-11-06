@@ -59,36 +59,16 @@ const RecentActivities = () => {
     {
       id: '4',
       type: 'blog',
-      title: 'Why Reps Remove All Doubt: Building Unshakeable Confidence',
+      title: 'Why Your Words Matter As A Parent?',
       description:
-        "In this deep dive, I explore the philosophy behind my coaching approach. Every champion knows that consistency beats talent when talent doesn't work consistently. Learn how deliberate practice and mental repetitions create the foundation for peak performance and lasting confidence in any field.",
-      thumbnail: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80',
-      date: 'September 28, 2024',
-      url: '#',
-      source: 'Reps with Jazz Blog',
+        "Your words carry immense weight in the lives of your children, especially in the pre-teen and teen years.",
+      thumbnail: 'Blog-1.png',
+      date: 'November 6, 2025',
+      url: 'https://www.raemini.com/post/why-your-words-matter-as-a-parent',
+      source: 'Raemini Magazine',
     },
-    {
-      id: '5',
-      type: 'news',
-      title: "From International Courts to Coaching: Jazz Ferguson's Journey",
-      description:
-        "Profile feature on Jazz Ferguson's transition from playing professional basketball internationally to founding a mental performance coaching business. The article highlights his unique approach to teen mentorship and how his playing experience informs his coaching philosophy.",
-      thumbnail: 'https://images.unsplash.com/photo-1504450874802-0ba2bcd9b5ae?w=800&q=80',
-      date: 'August 22, 2024',
-      url: '#',
-      source: 'Athlete Transitions Magazine',
-    },
-    {
-      id: '6',
-      type: 'blog',
-      title: "The Champion's Daily Routine: Small Habits, Big Results",
-      description:
-        "Success isn't built in moments of inspiration—it's built in the daily grind. In this post, I break down my personal morning routine and the science-backed habits that help athletes and professionals maintain peak mental performance throughout their day. Plus, actionable tips you can implement immediately.",
-      thumbnail: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80',
-      date: 'August 5, 2024',
-      url: '#',
-      source: 'Reps with Jazz Blog',
-    },
+   
+    
     
   ];
 
