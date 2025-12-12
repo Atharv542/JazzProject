@@ -28,7 +28,7 @@ const RecentActivities = () => {
       description:
         'Host Hilmarie Hutchison talks with Jazzmarr about how discipline and purpose shaped his journey from Louisville to international basketball, and how that same mindset fuels Reps with Jazz. He shares defining career moments, why "reps remove all doubt," the difference between coaching teens and adults, and practical ways to beat comparison, improve focus, and turn habits into confidence.',
       thumbnail: 'PodcastImage1.png',
-      date: 'October 22, 2024',
+      date: 'October 22, 2025',
       url: 'https://thematrixgreenpill.com/episodes/episode-267/',
       source: 'The Matrix Green Pill',
       duration: '27:14',
@@ -40,7 +40,7 @@ const RecentActivities = () => {
       description:
         'Jazz Ferguson is a professional basketball player turned mental performance coach who empowers ambitious teens and adult leaders to unlock their potential! Founder of Reps With Jazz, he delivers mentorship programs that build resilience, confidence, and the winning mindset needed to succeed in sports and life.',
       thumbnail: 'https://athletesuntapped.com/browse/wp-content/uploads/2024/08/MPC-City-2.jpg',
-      date: 'October 18, 2024',
+      date: 'October 18, 2025',
       url: 'https://www.buzzsprout.com/1689514/episodes/18031434?brid=fOUaQuzyyy2BEJqwweAHzw',
       source: 'Around The Emirates',
       duration: '9:48',
@@ -67,7 +67,40 @@ const RecentActivities = () => {
       url: 'https://www.raemini.com/post/why-your-words-matter-as-a-parent',
       source: 'Raemini Magazine',
     },
-   
+    {
+      id: '5',
+      type: 'news',
+      title: 'Money & Me',
+      description:
+        'Jazz Ferguson, a professional basketball player, learnt the value of money the hard way after splurging cash during the early stages of his career.Today, he is a life coach who advises on consistency, discipline and perseverance. Through his company, Reps With Jazz, he mentors young people and leaders to manage social pressures.',
+      thumbnail: 'News2.png',
+      date: 'November 09, 2025',
+      url: 'https://www.thenationalnews.com/business/money/2025/11/07/dubai-basketball-coach-uae-business-personal-finance/',
+      source: 'The National',
+    },
+    {
+      id: '6',
+      type: 'podcast',
+      title: 'Mindset Secrets',
+      description:
+        'They discuss Jazz’s Journey from leaving the projects of Louisville and how the death of a childhood friend affected him. How one of his early coaches ignited his self-belief and the dream of the NBA, how, as a pro-athlete, all he needed was one opportunity, and how having the right mindset, habits and commitment, can propel anyone to achieving maximum capacity.',
+      thumbnail: 'Podcast3.png',
+      date: 'November 27, 2025',
+      url: 'https://youtu.be/ptn9TuYGiJ0?si=s_yOrzppjlhzFyUg',
+      source: 'Tasty Humans Podcast',
+      duration: '1:03:19',
+    },
+    {
+      id: '7',
+      type: 'blog',
+      title: 'The Power of Quiet Consistency ',
+      description:
+        "The glory of a big win never gets old. When your company achieves major milestone,the recognition and rewards make all the hard work worthwhile.",
+      thumbnail: 'Blog-2.png',
+      date: 'November 30, 2025',
+      url: 'https://mags.itp.com/CEOME/2025/234-CEO-16-30-NOV-2025/#page=68',
+      source: 'CEO MIDDLE EAST',
+    },
     
     
   ];
