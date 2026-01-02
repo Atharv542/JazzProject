@@ -101,7 +101,17 @@ const RecentActivities = () => {
       url: 'https://mags.itp.com/CEOME/2025/234-CEO-16-30-NOV-2025/#page=68',
       source: 'CEO MIDDLE EAST',
     },
-    
+    {
+      id: '8',
+      type: 'news',
+      title: 'Court To Mind',
+      description:
+        "For Jazz Ferguson, the decision to bring his basketball career and mentorship journey to the UAE was rooted in both purpose and possibility.Mainly, it was a decision to find more stability for my family,” he says, adding that the UAE represents “a real land of opportunity right now.",
+      thumbnail: 'News3.png',
+      date: 'December 16, 2025',
+      url: 'https://www.thefinance360.com/inside-jazz-fergusons-mission-to-shape-basketball-champions-in-uae/',
+      source: 'FINANCE 360',
+    },
     
   ];
 
@@ -262,7 +272,7 @@ const RecentActivities = () => {
                         <img
                           src={activity.thumbnail}
                           alt={activity.title}
-                          className="w-full h-full object-fit md:object-cover transform group-hover:scale-110 transition-transform duration-500"
+                          className="w-full h-full object-fit md:object-fit transform group-hover:scale-110 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
 
