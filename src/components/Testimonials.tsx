@@ -38,7 +38,7 @@ const Testimonials = () => {
     },
     {
       type: 'video',
-      name: 'Geena Potter',
+      name: 'Gina Potter',
       title: 'Business Owner, Writer, Health Advocate',
       image: 'Video-1.jpeg',
       rating: 5,
