@@ -57,6 +57,17 @@ const Testimonials = () => {
       videoUrl: 'VideoTesti3.mp4',
       result: 'Helped in making champion comeback after recovering from big injury'
     },
+     {
+
+      type: 'video',
+      name: 'Sandy Florea',
+      title: 'Policy Advisor at the European Parliament',
+      image: 'Video-3.jpeg',
+      rating: 5,
+      videoCover: 'Video-3.jpeg',
+      videoUrl: 'VideoTesti2.mp4',
+      result: 'Helped in developing essential skills to perform in high-pressure situations.'
+    },
     
   ];
 
