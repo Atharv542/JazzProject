@@ -68,7 +68,35 @@ const Testimonials = () => {
       videoUrl: 'VideoTesti2.mp4',
       result: 'Helped in developing essential skills to perform in high-pressure situations.'
     },
-    
+     {
+      type: 'text',
+      name: 'Cory Martin',
+      title: '',
+      image: 'Cory.jpeg',
+      rating: 5,
+      text: 'My wife and I are grateful for the incredible work Jazz is doing with our teenage athletes. Jazz’s commitment to helping young athletes strengthen their mentality and develop a clear understanding of what it takes to succeed is truly life-changing. Through mentorship and guidance, Jazz is elevating values such as discipline, perseverance, and resilience—qualities that are essential for those aspiring to play at the collegiate level. By focusing not only on physical skills but also on mental preparation, Jazz is equipping our athletes with the tools they need to thrive both on and off the field/court. This type of leadership and dedication from Jazz is making a lasting impact on our kids and we are grateful! ',
+      result: 'The type of leadership and dedication helped in making a lasting impact on  kids and we are grateful! '
+    },
+      {
+      type: 'text',
+      name: 'Samantha Armstrong',
+      title: '',
+      image: 'Samantha.jpeg',
+      rating: 5,
+      text: 'My 14-year-old son started working with Jazz 6 months ago, and the impact has been significant. His mentorship has really shown how much of a role mindset plays in building confidence, establishing good habits, and, ultimately, achieving better results on court. It can be hard for parents to know the right things to say or how best to support their child through the highs and lows of a sport they love. As a professional athlete and performance coach, Jazz is able to create an instant connection and be a real inspiration to teens. ',
+      result: 'Helped in building confidence, establishing good habits, and, ultimately, achieving better results on court. '
+    },
+     {
+
+      type: 'video',
+      name: 'Amy Martin',
+      title: 'Parent of two teenage athletes',
+      image: 'Amy.jpeg',
+      rating: 5,
+      videoCover: 'Amy.jpeg',
+      videoUrl: 'Amy-Video.mp4',
+      result: 'Helped in making huge positive impact and changes in young teenage athletes.'
+    },
   ];
 
   const nextTestimonial = () => {
