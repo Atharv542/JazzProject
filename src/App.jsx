@@ -12,7 +12,6 @@ import MotivationalSpeaking from './components/MotivationSpeaking';
 import Gallery from './components/Gallery';
 import WhatsAppFooterButton from './components/WhatsappButton';
 import RecentActivities from './components/RecentActivities';
-import EventPopupController from './components/EventPopUpController';
 import EventPopup from './components/EventPopUp';
 
 function useIsDesktop() {
