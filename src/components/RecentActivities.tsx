@@ -112,6 +112,17 @@ const RecentActivities = () => {
       url: 'https://www.thefinance360.com/inside-jazz-fergusons-mission-to-shape-basketball-champions-in-uae/',
       source: 'FINANCE 360',
     },
+    {
+      id: '9',
+      type: 'blog',
+      title: 'Teen Thrive',
+      description:
+        "Dubai’s New Workshop Prepares Young Minds for Life’s Challenges Through Aviation Simulation",
+      thumbnail: 'Event1.png',
+      date: 'January 28, 2026',
+      url: 'https://feelingoodglobal.com/teen-thrive-dubais-new-workshop-prepares-young-minds/',
+      source: `feelin'good`,
+    },
     
   ];
 

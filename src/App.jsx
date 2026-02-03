@@ -12,6 +12,8 @@ import MotivationalSpeaking from './components/MotivationSpeaking';
 import Gallery from './components/Gallery';
 import WhatsAppFooterButton from './components/WhatsappButton';
 import RecentActivities from './components/RecentActivities';
+import EventPopupController from './components/EventPopUpController';
+import EventPopup from './components/EventPopUp';
 
 function useIsDesktop() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
@@ -27,10 +29,12 @@ function useIsDesktop() {
 
 function App() {
   const isDesktop = useIsDesktop();
+  const [showPopup, setShowPopup] = useState(true);
 
   return (
     <div className="min-h-screen">
       <Navbar />
+     {showPopup && <EventPopup onClose={() => setShowPopup(false)} />}
       <Hero />
       <About />
       <Services />
